@@ -21,8 +21,7 @@ export default class FilterableArtistsContainer extends Component {
 
   render () {
     const desiredArtist = this.state.inputValue;
-    const matchingArtist = this.props.artists.filter(artist => (artist.name === desiredArtist));
-
+    const matchingArtist = this.props.artists.filter(artist => artist.name.match(desiredArtist));
     return (
             <div>
               <FilterInput handleEvent={this.handleEvent} />
