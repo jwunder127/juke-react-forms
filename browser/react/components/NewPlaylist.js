@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NewPlaylist = (props) =>{
-   const isInvalid = (props.inputValue.length > 16)
-   const tooShort = (props.inputValue.length === 0)
+const NewPlaylist = (props) => {
+   const isInvalid = (props.inputValue.length > 16);
+   const tooShort = (props.inputValue.length === 0);
    return (
   <div className="well">
     <form className="form-horizontal" onSubmit = {props.handleSubmission}>
@@ -15,7 +15,8 @@ const NewPlaylist = (props) =>{
               <div className="alert alert-warning">Length is too long!</div> : null}
             {(tooShort && props.hasReceivedInput) ? <div className="alert alert-warning">Length is too short! </div> : null}
 
-            <input className="form-control" type="text" onChange = {props.handleEvent}
+            <input
+            className="form-control" type="text" onChange = {props.handleEvent}
               value = {props.inputValue}
             />
           </div>
@@ -28,6 +29,6 @@ const NewPlaylist = (props) =>{
       </fieldset>
     </form>
   </div>
-  )
-}
+  );
+};
 export default NewPlaylist;

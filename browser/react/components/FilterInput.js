@@ -10,6 +10,6 @@ const FilterInput = (props) => {
       />
     </form>
   );
-}
+};
 
 export default FilterInput;
